@@ -3,6 +3,7 @@ import Image from "next/image";
 import IntroText from '@/components/homepage/introtext'
 import MyPhoto from '@/components/homepage/myphoto'
 import WhatIDo from '@/components/homepage/whatido'
+import TechSkills from '@/components/homepage/techskills'
 export default function Home() {
 
   return (
@@ -21,6 +22,11 @@ export default function Home() {
     {/* //what i do */}
     <div>
       <WhatIDo/>
+    </div>
+
+    {/* tech skills */}
+    <div className="my-10">
+      <TechSkills />
     </div>
    </div>
   );

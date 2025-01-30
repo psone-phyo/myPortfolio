@@ -48,7 +48,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-      <div className="flex justify-start   items-center shadow-md p-2 bg-[#222437]">
+      {/* <div className="flex justify-start   items-center shadow-md p-2 bg-[#222437]">
       <NavigationMenu className=" mx-[10%]">
         <NavigationMenuList  className="p-3 gap-3">
         {
@@ -64,7 +64,7 @@ export default function RootLayout({
         }
         </NavigationMenuList>
       </NavigationMenu>
-      </div>
+      </div> */}
       <div className=" mx-[10%]">
       {children}  
       </div>

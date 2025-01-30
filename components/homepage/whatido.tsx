@@ -30,7 +30,9 @@ const whatido = () => {
         },
     ]
   return (
-    <div className='grid grid-cols-3 gap-5 mt-10'>
+    <div className=' mt-10 '>
+        <h1 className='font-bold text-4xl text-sky-500 text-center'>What I Do</h1>
+        <div className='lg:grid lg:grid-cols-3 gap-5 mt-10 flex flex-col justify-center items-center'>
         {
             whatIDo.map((item, index) => (
             <Card className='grid-col-1 border-2 border-sky-800 bg-trasparent' key={index}>
@@ -50,6 +52,8 @@ const whatido = () => {
             ))
         }
     </div>
+    </div>
+    
   )
 }
 
