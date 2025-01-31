@@ -1,3 +1,4 @@
+'use client '
 import React from 'react'
 import {
   NavigationMenu,
@@ -13,14 +14,15 @@ import { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu"
 import Link from "next/link";
 
 const navigation = () => {
-    
     const navigation = [
-        {title: 'Home', link: '#'},
-        {title: 'Projects', link: '#'},
+        {title: 'Home', link: '/'},
+        {title: 'Projects', link: '/projects'},
         {title: 'About', link: '#'},
         {title: 'Blog', link: '#'},
         {title: 'Contact', link: '#'},
     ]
+
+    
   return (
      <div className="flex justify-start   items-center shadow-md p-2 bg-[#222437]">
       <NavigationMenu className=" mx-[10%]">

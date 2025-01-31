@@ -1,11 +1,13 @@
-import React from 'react'
+import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
+import { AppSidebar } from "@/components/app-sidebar"
 
-const navigationMobile = () => {
+export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <div>
-        
-    </div>
+    <SidebarProvider>
+      <AppSidebar />
+      <main>
+        <SidebarTrigger />
+      </main>
+    </SidebarProvider>
   )
 }
-
-export default navigationMobile

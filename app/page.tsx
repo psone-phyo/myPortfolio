@@ -4,8 +4,8 @@ import IntroText from '@/components/homepage/introtext'
 import MyPhoto from '@/components/homepage/myphoto'
 import WhatIDo from '@/components/homepage/whatido'
 import TechSkills from '@/components/homepage/techskills'
+import ShowCarousel from '@/components/projects/showcarousel'
 export default function Home() {
-
   return (
    <div>
     
@@ -20,13 +20,18 @@ export default function Home() {
     </div>
 
     {/* //what i do */}
-    <div>
+    <div className="my-10">
       <WhatIDo/>
     </div>
 
     {/* tech skills */}
     <div className="my-10">
       <TechSkills />
+    </div>
+
+    <div>
+      <h1 className="font-bold text-sky-600 text-center text-3xl my-5">Projects</h1>
+      <ShowCarousel/>
     </div>
    </div>
   );

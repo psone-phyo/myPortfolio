@@ -19,7 +19,7 @@ const footer = () => {
     <div className='h-[500px] bg-[#1b1c28] flex justify-center items-start py-10'>
         <div className='mx-[10%] flex justify-evenly items-start w-full'>
             <div className='text-sky-200'>
-                <h1 className='text-sky-500 text-2xl mb-5'>My Social Media</h1>
+                <h1 className='text-sky-500 text-lg md:text-2xl mb-5'>My Social Media</h1>
                 <div className='flex flex-col gap-x-2 gap-y-5'>
                     {
                         socialmedia.map((item,index) => (
@@ -34,7 +34,7 @@ const footer = () => {
             </div>
 
             <div className='text-sky-200'>
-                <h1 className='text-sky-500 text-2xl mb-5'>Navigation</h1>
+                <h1 className='text-sky-500 text-lg md:text-2xl mb-5'>Navigation</h1>
                 <div className='flex flex-col gap-x-2 gap-y-2'>
                     {
                         navigation.map((item,index) => (

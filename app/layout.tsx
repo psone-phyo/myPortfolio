@@ -5,6 +5,8 @@ import "./globals.css";
 import Navigation from '@/components/layout/navigation'
 import NavigationMobile from '@/components/layout/navigationMobile'
 import Footer from '@/components/layout/footer'
+import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
+import { AppSidebar } from "@/components/app-sidebar"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,16 +33,28 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className="hidden lg:block">
+        <div className="hidden xl:block">
         <Navigation/>
+        <div className="mx-[10%]">
+        {children}  
+      </div>
         </div>
-        <div className="block lg:hidden">
-        <NavigationMobile/>
+
+        <div className="block xl:hidden">
+        <SidebarProvider>
+            <AppSidebar />
+            <main>
+              <div className="flex justify-start items-center shadow-md p-2 bg-[#222437]">
+              <SidebarTrigger />
+              </div>
+              <div className="mx-5">
+              {children}  
+              </div>
+            </main>
+        </SidebarProvider>
         </div>
       
-      <div className=" mx-[10%]">
-      {children}  
-      </div>
+      
       <Footer/>
       </body>
     </html>
