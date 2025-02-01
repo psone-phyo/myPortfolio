@@ -10,20 +10,24 @@ import {
 
 const projects = () => {
   return (
-    <div>
-      <div className="">
-        <Card className="grid grid-cols-2 primary-bg border-2 border-sky-300 text-sky-200">
-          <CardHeader className="grid-col-1">
+    <div className="my-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+        {
+          Array.from({ length: 5 }).map((_, index) => (
+        <Card className="grid grid-cols-1 primary-bg border-2 border-sky-300 text-sky-200 cursor-pointer hover:scale-105 transition-all" key={index}>
+          <div className="px-5 py-5">
+            <div className="p-2 bg-sky-200 rounded-md">
             <img src="/designcolor.jpg" alt="" className="w-full"/>
-          </CardHeader>
-          <CardHeader className="">
+            </div>
+          </div>
+          <div className="px-5 pb-5">
             <div>
             <h1>Project Name</h1>
             <small>12/9/2024</small>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit culpa odio accusamus cupiditate obcaecati, aliquam, dicta dignissimos labore minima eligendi quaerat autem quo repudiandae ratione eveniet atque eius laboriosam tempora.</p>
             </div>
             
-            <div className="flex justify-start items-center gap-2">
+            <div className="flex justify-start items-center gap-2 mt-3">
                 <small className="bg-sky-700 rounded-md p-1 text-sky-100">
                     Reactjs
                 </small>
@@ -34,8 +38,11 @@ const projects = () => {
                     Nodejs
                 </small>
             </div>
-          </CardHeader>
+          </div>
         </Card>
+          ))
+        }
+        
       </div>
     </div>
   );

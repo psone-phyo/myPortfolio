@@ -1,5 +1,6 @@
 import { Calendar, Home, Inbox, Search, Settings } from "lucide-react"
 
+
 import {
   Sidebar,
   SidebarContent,
@@ -14,11 +15,11 @@ import {
 import { cn } from "@/lib/utils"
 import { useState } from "react"
 const navigation = [
-    {title: 'Home', link: '#'},
-    {title: 'Projects', link: '#'},
-    {title: 'About', link: '#'},
-    {title: 'Blog', link: '#'},
-    {title: 'Contact', link: '#'},
+  {title: 'Home', link: '/'},
+  {title: 'Projects', link: '/projects'},
+  {title: 'Service', link: '/service'},
+  {title: 'Blog', link: '/blog'},
+  {title: 'Contact', link: '/contact'},
 ]
 
 export function AppSidebar() {

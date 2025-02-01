@@ -17,9 +17,9 @@ const navigation = () => {
     const navigation = [
         {title: 'Home', link: '/'},
         {title: 'Projects', link: '/projects'},
-        {title: 'About', link: '#'},
-        {title: 'Blog', link: '#'},
-        {title: 'Contact', link: '#'},
+        {title: 'Service', link: '/service'},
+        {title: 'Blog', link: '/blog'},
+        {title: 'Contact', link: '/contact'},
     ]
 
     

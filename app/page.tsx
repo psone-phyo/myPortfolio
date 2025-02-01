@@ -5,6 +5,8 @@ import MyPhoto from '@/components/homepage/myphoto'
 import WhatIDo from '@/components/homepage/whatido'
 import TechSkills from '@/components/homepage/techskills'
 import ShowCarousel from '@/components/projects/showcarousel'
+import Link from "next/link";
+import { ArrowDown } from "lucide-react";
 export default function Home() {
   return (
    <div>
@@ -29,9 +31,11 @@ export default function Home() {
       <TechSkills />
     </div>
 
-    <div>
-      <h1 className="font-bold text-sky-600 text-center text-3xl my-5">Projects</h1>
-      <ShowCarousel/>
+    <div className="my-10">
+    <h1 className="text-center text-3xl font-bold text-sky-600 mb-5">Projects Previews</h1>
+      <div className="flex justify-center items-center">
+        <ShowCarousel/>
+      </div>
     </div>
    </div>
   );
