@@ -44,7 +44,7 @@ export default function RootLayout({
         <SidebarProvider>
             <AppSidebar />
             <main>
-              <div className="flex justify-start items-center shadow-md p-2 bg-[#222437]">
+              <div className="flex justify-start items-center w-screen shadow-md p-2 bg-[#222437]">
               <SidebarTrigger />
               </div>
               <div className="mx-5">

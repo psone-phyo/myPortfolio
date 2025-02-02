@@ -6,7 +6,7 @@ const mycontact = () => {
     <div className='flex flex-col justify-center items-center border-sky-500 border p-5 rounded-lg'>
                 <h1 className='text-sky-500 font-bold text-3xl mb-5'>My Contact</h1>
                 <div className='flex flex-col gap-5'>
-                <div className='flex items-center gap-5 '>
+                    <div className='flex items-center gap-5 '>
                         <Mail size={32} className='text-sky-300'/>
                         <div className='text-sky-300 font-bold text-xl'>psone9921@gmail.com</div>
                     </div>
@@ -24,7 +24,7 @@ const mycontact = () => {
                     </div>
                 </div>
                     
-                </div>
+    </div>
   )
 }
 
