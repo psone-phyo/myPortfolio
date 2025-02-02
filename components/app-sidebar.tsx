@@ -27,7 +27,7 @@ export function AppSidebar() {
     <Sidebar>
       <SidebarContent  className="primary-bg text-sky-200">
         <SidebarGroup>
-          <SidebarGroupLabel>Application</SidebarGroupLabel>
+          <SidebarGroupLabel>Navigation</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               {navigation.map((item) => (

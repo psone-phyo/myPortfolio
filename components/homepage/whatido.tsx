@@ -1,16 +1,9 @@
 'use client'
-import {
-    Card,
-    CardContent,
-    CardDescription,
-    CardFooter,
-    CardHeader,
-    CardTitle,
-  } from "@/components/ui/card"
+
 import { ChevronsLeftRightEllipsis, CodeXml, Database } from 'lucide-react'
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-
+import WhatIDoCard from '@/components/homepage/components/whatidocard'
 
 const whatido = () => {
     const whatIDo = [
@@ -33,7 +26,6 @@ const whatido = () => {
             icon:<Database size={50} className='text-sky-300'/>
         },
     ]
-  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
 
   return (
     <div className=' mt-10 '>
@@ -41,30 +33,7 @@ const whatido = () => {
         <div className='lg:grid lg:grid-cols-3 gap-5 mt-10 flex flex-col justify-center items-center'>
         {
             whatIDo.map((item, index) => (
-              <motion.div
-              ref={ref}
-              initial={{ y: -100, opacity: 0 }}
-              animate={inView ? { y: 0, opacity: 1 } : { y: -100, opacity: 0 }}
-              transition={{ duration: 1 }}
-              key={index}
-              
-            >
-              <Card className='grid-col-1 border-2 border-sky-800 bg-trasparent'>
-            <CardHeader >
-            <div className='flex flex-col justify-center items-center gap-2'>
-                {item.icon}
-                <CardTitle className='text-sky-300 font-bold'>{item.title}</CardTitle>
-                
-            </div>
-            </CardHeader>
-            <CardContent className='text-blue-200'>
-                <div>
-                {item.description}
-                </div>
-            </CardContent>
-        </Card>
-            </motion.div>
-            
+              <WhatIDoCard item={item} key={index}/>
             ))
         }
     </div>

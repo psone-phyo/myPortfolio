@@ -35,17 +35,18 @@ export default function RootLayout({
       >
         <div className="hidden xl:block">
         <Navigation/>
-        <div className="mx-[10%]">
+        <div className="mx-[10%] mt-20">
         {children}  
-      </div>
+        </div>
         </div>
 
         <div className="block xl:hidden">
         <SidebarProvider>
             <AppSidebar />
             <main>
-              <div className="flex justify-start items-center w-screen shadow-md p-2 bg-[#222437]">
+              <div className="flex justify-between items-center w-screen shadow-md p-2 bg-[#222437]">
               <SidebarTrigger />
+              <h1 className='ms-[10%] text-sky-400 font-bold text-xl'>Pyae Sone Phyo</h1>
               </div>
               <div className="mx-5">
               {children}  

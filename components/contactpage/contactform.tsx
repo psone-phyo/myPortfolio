@@ -1,4 +1,6 @@
 "use client"
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
@@ -25,6 +27,8 @@ const formSchema = z.object({
 })
 
 export default function ProfileForm() {
+  const { ref, inView } = useInView({ triggerOnce: false, threshold: 0.2 });
+
   // 1. Define your form.
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -43,7 +47,13 @@ export default function ProfileForm() {
   }
 
   return (
-    <Form {...form}>
+    <motion.div
+        ref={ref}
+        initial={{ x: 100, opacity: 0 }}
+        animate={inView ? { x: 0, opacity: 1 } : { x: 100, opacity: 0 }}
+        transition={{ duration: 1 }}
+      >
+        <Form {...form}>
         <h1 className="text-3xl font-bold text-sky-400 mb-5">Contact Form</h1>
       <form onSubmit={form.handleSubmit(onSubmit)} className=" text-sky-100 grid grid-cols-2 gap-5">
         <FormField
@@ -89,5 +99,7 @@ export default function ProfileForm() {
         <Button type="submit" className="bg-transparent border border-sky-400 text-sky-500 hover:text-sky-900 hover:bg-sky-500 col-span-2 mt-5">Send</Button>
       </form>
     </Form>
+      </motion.div>
+    
   )
 }
