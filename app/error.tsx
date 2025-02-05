@@ -2,9 +2,9 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Lottie from "lottie-react";
-import astronautAnimation from "../public/404.json"; // Use local file
+import ServerError from "../public/error.json"; // Use local file
 
-export default function Custom404() {
+export default function ErroPage() {
   return (
     <div className="flex flex-col items-center justify-start min-h-screen text-white text-center px-6">
       {/* Floating 404 Text */}
@@ -16,8 +16,8 @@ export default function Custom404() {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5, duration: 1.5 }}
       >
-        <h1 className="font-bold text-sky-500 text-3xl">Oops! The page you're looking for doesn't exist.</h1>
-        
+        <h1 className="font-bold text-6xl  text-sky-500">500</h1>
+        <h1 className="text-3xl font-bold text-sky-500">Internal Server Error</h1>
       </motion.p>
 
       {/* Lottie Animation */}
@@ -25,10 +25,10 @@ export default function Custom404() {
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: .5, duration: 0.5 }}
-        className="mt-6"
+        className="mt-3"
       >
-        <div className="w-72 h-72 mt-6">
-        <Lottie animationData={astronautAnimation} loop={true} />
+        <div className="w-72 h-72 mt-6 bg-sky-800 rounded-md">
+        <Lottie animationData={ServerError} loop={true} />
       </div>
       </motion.div>
       
@@ -40,11 +40,6 @@ export default function Custom404() {
         transition={{ delay: .5, duration: 0.5 }}
         className="mt-6"
       >
-        <Link href="/">
-          <span className="px-6 py-3 text-lg font-medium bg-sky-600 rounded-lg hover:bg-sky-700 transition-all cursor-pointer">
-            Back to Home
-          </span>
-        </Link>
       </motion.div>
     </div>
   );

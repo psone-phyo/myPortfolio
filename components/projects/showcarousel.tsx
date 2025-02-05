@@ -28,9 +28,9 @@ export default function CarouselDemo() {
         {Array.from({    length: 5 }).map((_, index) => (
           <CarouselItem className="cursor-pointer" key={index}>
             <Link href='/projects'>
-              <Card className="border-2 border-sky-500 bg-transparent">
+              <Card className="bg-sky-100">
                 <CardHeader className="text-sky-200 p-3">
-                  <div className="p-2 bg-sky-100 rounded-md">
+                  <div className="p-2">
                   <img src="/designcolor.jpg" alt="" className="w-full rounded-md"/>
                   <h1 className='text-lg md:text-xl font-bold text-sky-900 text-center md:my-3'>Project 1 Name</h1>
                   </div>

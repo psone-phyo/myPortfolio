@@ -36,7 +36,7 @@ export default function RootLayout({
         <div className="hidden xl:block">
         <Navigation/>
         <div className="mx-[10%] mt-20">
-        {children}  
+        {children}
         </div>
         </div>
 
